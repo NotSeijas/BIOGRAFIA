@@ -236,6 +236,49 @@
         text-align: center;
         padding: 2rem;
       }
+
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 1rem;
+          text-align: center;
+        }
+
+        header h1 {
+          font-size: 1.3rem;
+        }
+
+        nav {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          align-items: center;
+          margin-top: 1rem;
+        }
+
+        nav a {
+          margin: 0.5rem 0;
+        }
+
+        .logo-container {
+          width: 40px;
+          height: 40px;
+        }
+
+        section {
+          padding: 2rem 1rem;
+        }
+
+        .card {
+          padding: 1rem;
+        }
+
+        .redes a {
+          font-size: 1.2rem;
+          padding: 0.7rem 1.2rem;
+        }
+      }
     </style>
   </head>
   <body>
