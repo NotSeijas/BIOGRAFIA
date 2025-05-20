@@ -12,349 +12,254 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <style>
       * {
-        scroll-behavior: smooth;
-        box-sizing: border-box;
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
       }
 
       body {
         font-family: "Inter", sans-serif;
-        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-        color: #f0f0f0;
-        overflow-x: hidden;
+        background: #0f0f1a;
+        color: #e0e0e0;
+        line-height: 1.6;
       }
 
       header {
-        background: #0c0c0c;
-        color: white;
-        padding: 1.5rem 2rem;
+        background-color: #0f172a;
+        box-shadow: 0 0 20px #0ff;
         position: sticky;
         top: 0;
         z-index: 1000;
+        padding: 0.75rem 2rem;
         display: flex;
         justify-content: space-between;
+        align-items: center; /* Centrado vertical */
+        color: #0ff;
+      }
+      .logo {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        margin-right: 1rem;
+      }
+      .header-info {
+        display: flex;
         align-items: center;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #0ff;
+        letter-spacing: 1px;
+        line-height: 1; /* Ajusta el alineamiento */
+      }
+
+      .header-info span {
+        transform: translateY(2px); /* Ajuste fino para alinear con la imagen */
       }
 
       nav a {
-        color: white;
+        margin-left: 1.5rem;
+        color: #00f2ff;
         text-decoration: none;
-        margin: 0 1rem;
-        font-weight: bold;
-        transition: color 0.3s ease;
+        font-weight: 600;
+        transition: 0.3s ease;
+        text-shadow: 0 0 5px #00f2ff;
       }
 
       nav a:hover {
-        color: #00ffcc;
+        color: #00fff2;
+        text-shadow: 0 0 8px #00fff2;
       }
 
       section {
         padding: 4rem 2rem;
-        max-width: 960px;
-        margin: 0 auto;
-        animation: fadeIn 1s ease-in;
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+        max-width: 1100px;
+        margin: auto;
       }
 
       h1,
-      h2 {
+      h2,
+      h3 {
+        color: #ffffff;
+        font-weight: 700;
         margin-bottom: 1rem;
-        color: #00e6c3;
+        text-shadow: 0 0 10px #0ff;
       }
 
       .bio {
-        line-height: 1.7;
-        font-size: 1.1rem;
-        color: #d9d9d9;
+        font-size: 1.2rem;
+        color: #c0c0ff;
+        max-width: 700px;
       }
 
       .servicios,
       .proyectos {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         gap: 2rem;
         margin-top: 2rem;
       }
 
       .card {
-        background: #1e1e1e;
-        border-radius: 12px;
-        padding: 1.5rem;
-        box-shadow: 0 6px 20px rgba(0, 255, 204, 0.1);
+        background: #1c1c3a;
+        border-radius: 16px;
+        box-shadow: 0 0 20px #00f2ff44;
+        padding: 2rem;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        text-align: center;
+        border: 1px solid #00f2ff22;
       }
 
       .card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 10px 30px rgba(0, 255, 204, 0.2);
+        transform: translateY(-6px);
+        box-shadow: 0 0 25px #00f2ff99;
       }
 
       .card img {
-        width: 100%;
-        max-height: 180px;
-        object-fit: cover;
-        border-radius: 10px;
+        max-width: 100%;
+        border-radius: 12px;
         margin-bottom: 1rem;
-        cursor: pointer;
-        animation: zoomFade 0.6s ease forwards;
-        transition: transform 0.4s ease;
-      }
-
-      .card img:hover {
-        transform: scale(1.08) translateY(-4px);
-      }
-
-      @keyframes zoomFade {
-        from {
-          opacity: 0;
-          transform: scale(0.9) translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: scale(1) translateY(0);
-        }
+        border: 2px solid #00f2ff22;
       }
 
       .card h3 {
+        color: #0ff;
         margin-bottom: 0.5rem;
-        color: #00ffcc;
       }
 
       .card p {
-        color: #ccc;
+        color: #b0b0d0;
       }
 
       .contacto {
-        margin-top: 3rem;
+        background: #13132a;
+        padding: 3rem 2rem;
+        border-radius: 16px;
         text-align: center;
+        margin-top: 3rem;
+        box-shadow: 0 0 20px #00f2ff33;
+        border: 1px solid #00f2ff22;
       }
 
-      .contacto h3 {
-        font-size: 1.6rem;
+      .contacto p {
+        color: #c0c0ff;
         margin-bottom: 1.5rem;
-        color: #ffffff;
-        font-weight: 600;
-        letter-spacing: 1px;
-        animation: fadeUp 1s ease-out forwards;
-        opacity: 0;
-      }
-      .logo-container {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        overflow: hidden;
-        animation: logoFade 1.2s ease-out forwards;
-        opacity: 0;
-      }
-
-      .logo {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 50%;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-        transition: transform 0.4s ease;
-      }
-
-      .logo:hover {
-        transform: scale(1.05);
-      }
-
-      @keyframes logoFade {
-        from {
-          opacity: 0;
-          transform: scale(0.8);
-        }
-        to {
-          opacity: 1;
-          transform: scale(1);
-        }
-      }
-
-      @keyframes fadeUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .redes {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        flex-wrap: wrap;
       }
 
       .redes a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0.9rem 1.5rem;
-        border-radius: 40px;
-        font-weight: bold;
-        color: white;
-        text-decoration: none;
-        font-size: 1.4rem;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin: 0 1rem;
+        color: #0ff;
+        font-size: 1.8rem;
+        transition: 0.3s ease;
+        text-shadow: 0 0 5px #0ff;
       }
 
       .redes a:hover {
-        transform: translateY(-3px) scale(1.05);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-      }
-
-      .redes a:nth-child(1) {
-        background-color: #25d366; /* WhatsApp */
-      }
-
-      .redes a:nth-child(2) {
-        background-color: #e1306c; /* Instagram */
+        color: #00fff2;
+        text-shadow: 0 0 10px #00fff2;
       }
 
       footer {
-        background: #0c0c0c;
-        color: white;
+        background-color: #0e0e20;
         text-align: center;
-        padding: 2rem;
+        padding: 1rem;
+        font-size: 0.9rem;
+        color: #8888aa;
+        border-top: 1px solid #00f2ff22;
       }
 
       @media (max-width: 768px) {
         header {
           flex-direction: column;
           align-items: flex-start;
-          padding: 1rem;
-          text-align: center;
-        }
-
-        header h1 {
-          font-size: 1.3rem;
         }
 
         nav {
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-          align-items: center;
           margin-top: 1rem;
         }
 
         nav a {
+          display: block;
           margin: 0.5rem 0;
         }
 
-        .logo-container {
-          width: 40px;
-          height: 40px;
-        }
-
-        section {
-          padding: 2rem 1rem;
-        }
-
-        .card {
-          padding: 1rem;
-        }
-
         .redes a {
-          font-size: 1.2rem;
-          padding: 0.7rem 1.2rem;
+          display: inline-block;
+          margin: 0.5rem;
         }
       }
     </style>
   </head>
   <body>
     <header>
-      <div style="display: flex; align-items: center; gap: 1rem">
-        <div class="logo-container">
-          <img
-            src="https://wallpapers.com/images/hd/programming-reveal-love-balvpj90bq07034q.jpg"
-            alt="Logo"
-            class="logo"
-          />
-        </div>
-        <h1>C.O Diego Seijas</h1>
+      <div class="header-info">
+        <img
+          src="https://avatars.githubusercontent.com/u/103737837?v=4"
+          alt="Logo"
+          class="logo"
+        />
+        <span>C . O Diego Seijas</span>
       </div>
       <nav>
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#servicios">Servicios</a>
         <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
       </nav>
     </header>
 
-    <section id="sobre-mi">
-      <h2>Sobre mí</h2>
+    <section id="sobre-mi" data-aos="fade-up">
+      <h1>Hola, soy Diego Seijas</h1>
       <p class="bio">
-        ¡Hola! Soy <strong>Diego Seijas </strong>, estudiante de
-        <strong>Ingeniería en Software</strong> con 20 años, apasionado por el
-        desarrollo web. Me dedico a crear
-        <strong>páginas web modernas, responsivas y funcionales</strong> para
-        personas, negocios y emprendimientos que quieren dar el siguiente paso
-        digital. Trabajo de manera <strong>freelance</strong>, ofreciendo
-        soluciones accesibles adaptadas a tus necesidades, desde landing pages
-        hasta tiendas online, Como tambien desarrollador de proyectos de
-        Algoritmos. C++, python, C#, Java Script. 🚀
+        Soy desarrollador web con pasión por crear experiencias digitales
+        únicas. Me especializo en el diseño y desarrollo de interfaces
+        intuitivas, funcionales y visualmente atractivas. Utilizo tecnologías
+        modernas como React, Tailwind CSS y JavaScript para convertir ideas en
+        sitios y aplicaciones dinámicas.
       </p>
     </section>
 
-    <section id="servicios">
+    <section id="servicios" data-aos="fade-up">
       <h2>Servicios</h2>
       <div class="servicios">
         <div class="card">
-          <h3>Paquete Básico - S/ 100</h3>
+          <h3>Diseño Web</h3>
           <p>
-            -Ideal para presentaciones personales o campañas. Incluye una
-            landing page responsiva con formulario de contacto. Como tambien,
-            Desarrollador de Juegos 2D, texto.
+            Diseños modernos, responsivos y personalizados que se adaptan a
+            todas las pantallas.
           </p>
         </div>
         <div class="card">
-          <h3>Paquete Medio - S/ 150</h3>
+          <h3>Desarrollo Frontend</h3>
           <p>
-            Perfecto para negocios pequeños. Incluye sitio web de 3 secciones
-            (Inicio, Servicios, Contacto) + redes sociales. Como tambien,
-            Resolver Trabajos de Algortimos de distintas carreras.
+            Interfaces dinámicas y funcionales usando React, Tailwind CSS y
+            otras tecnologías actuales.
           </p>
         </div>
         <div class="card">
-          <h3>Paquete Pro - S/ 300</h3>
+          <h3>Optimización SEO</h3>
           <p>
-            Para tiendas o marcas completas. Web profesional con hasta 5
-            secciones, galería o catálogo, redes sociales y SEO básico.
+            Mejora del posicionamiento en buscadores para aumentar la
+            visibilidad online.
           </p>
         </div>
       </div>
     </section>
 
-    <section id="proyectos">
+    <section id="proyectos" data-aos="fade-up">
       <h2>Proyectos</h2>
       <div class="proyectos">
         <div class="card">
           <a
             href="https://notseijas.github.io/landing-entrenador/"
             target="_blank"
-            ><img
+          >
+            <img
               src="https://res.cloudinary.com/dt0f3rrdh/image/upload/v1745616450/treiner_p3vpy7.png"
               alt="Entrenador Personal"
-          /></a>
+            />
+          </a>
           <h3>Entrenador Personal</h3>
           <p>
             Landing page con formulario de contacto, ideal para promocionar
@@ -362,24 +267,24 @@
           </p>
         </div>
         <div class="card">
-          <a href="https://huariquepucallpa.netlify.app/" target="_blank"
-            ><img
+          <a href="https://huariquepucallpa.netlify.app/" target="_blank">
+            <img
               src="https://res.cloudinary.com/dt0f3rrdh/image/upload/v1745607933/huarique_ccuxsm.png"
               alt="Restaurante El Sabor"
-          /></a>
+            />
+          </a>
           <h3>Huariques Pucallpa</h3>
           <p>
             Web con menú interactivo, galería de platos y sistema de reservas.
           </p>
         </div>
         <div class="card">
-          <a
-            href="https://www.manosperuanas.com/?srsltid=AfmBOoqaBawvAV8jZdxWATplkpReixZTdH8SSidBYMg5DxdZ-uM6c6B4"
-            target="_blank"
-            ><img
+          <a href="https://www.manosperuanas.com/" target="_blank">
+            <img
               src="https://res.cloudinary.com/dt0f3rrdh/image/upload/v1745616980/TIENDA_mlslnc.png"
               alt="Tienda Artesanal"
-          /></a>
+            />
+          </a>
           <h3>Tienda Artesanal</h3>
           <p>
             Catálogo de productos con carrito de compras simulado y diseño
@@ -387,23 +292,24 @@
           </p>
         </div>
         <div class="card">
-          <a href="https://notseijas.github.io/becode-landing/" target="_blank"
-            ><img
-              src="https://media.istockphoto.com/id/1394701218/es/foto/concepto-de-b%C3%BAsqueda-de-empleo-encontrar-su-carrera-mujer-mirando-el-sitio-web-en-l%C3%ADnea-por.jpg?s=612x612&w=0&k=20&c=XiiBCdP8oisZ9twTxZ6HSbQsWqzWVsJFVwO2Hz4WFwA="
+          <a href="https://notseijas.github.io/becode-landing/" target="_blank">
+            <img
+              src="https://media.istockphoto.com/id/1394701218/es/foto/concepto-de-b%C3%BAsqueda-de-empleo-encontrar-su-carrera-mujer-mirando-el-sitio-web-en-l%C3%ADnea-por.jpg"
               alt="Campaña Freelance"
-          /></a>
-          <h3>Campaña De busqueda de Empleo</h3>
+            />
+          </a>
+          <h3>Campaña de Empleo</h3>
           <p>
-            Landing page para un servicio o campaña publicitaria, con
-            integración de redes.
+            Landing page para una campaña publicitaria con integración de redes.
           </p>
         </div>
         <div class="card">
-          <a href="#" target="_blank"
-            ><img
-              src="https://images.unsplash.com/photo-1552627019-947c3789ffb5?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGF0dG9vJTIwYXJ0aXN0fGVufDB8fDB8fHww"
+          <a href="#" target="_blank">
+            <img
+              src="https://images.unsplash.com/photo-1552627019-947c3789ffb5?fm=jpg&q=60&w=3000"
               alt="Estudio de Tatuajes"
-          /></a>
+            />
+          </a>
           <h3>Estudio de Tatuajes</h3>
           <p>
             Web con galería, sección de artistas y formulario de contacto
@@ -411,26 +317,35 @@
           </p>
         </div>
       </div>
+    </section>
 
-      <div class="contacto">
-        <h3>Contáctame:</h3>
-        <div class="redes">
-          <a href="https://wa.me/51998984552" target="_blank" title="WhatsApp">
-            <i class="fab fa-whatsapp"></i>
-          </a>
-          <a
-            href="https://www.instagram.com/notseijas/"
-            target="_blank"
-            title="Instagram"
-          >
-            <i class="fab fa-instagram"></i>
-          </a>
-        </div>
+    <section id="contacto" class="contacto" data-aos="fade-up">
+      <h3>Contáctame</h3>
+      <p>
+        ¿Quieres que trabajemos juntos o tienes alguna duda? ¡Estoy disponible
+        para nuevos proyectos!
+      </p>
+      <div class="redes">
+        <a href="https://wa.me/51998984552" target="_blank" title="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/notseijas/"
+          target="_blank"
+          title="Instagram"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
       </div>
     </section>
 
     <footer>
-      <p>&copy; 2025 Diego Seijas | Desarrollador Web Freelance</p>
+      <p>&copy; 2025 Diego Seijas. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
