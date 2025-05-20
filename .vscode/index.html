@@ -13,183 +13,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: "Inter", sans-serif;
-        background: #0f0f1a;
-        color: #e0e0e0;
-        line-height: 1.6;
-      }
-
-      header {
-        background-color: #0f172a;
-        box-shadow: 0 0 20px #0ff;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        padding: 0.75rem 2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center; /* Centrado vertical */
-        color: #0ff;
-      }
-      .logo {
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        margin-right: 1rem;
-      }
-      .header-info {
-        display: flex;
-        align-items: center;
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: #0ff;
-        letter-spacing: 1px;
-        line-height: 1; /* Ajusta el alineamiento */
-      }
-
-      .header-info span {
-        transform: translateY(2px); /* Ajuste fino para alinear con la imagen */
-      }
-
-      nav a {
-        margin-left: 1.5rem;
-        color: #00f2ff;
-        text-decoration: none;
-        font-weight: 600;
-        transition: 0.3s ease;
-        text-shadow: 0 0 5px #00f2ff;
-      }
-
-      nav a:hover {
-        color: #00fff2;
-        text-shadow: 0 0 8px #00fff2;
-      }
-
-      section {
-        padding: 4rem 2rem;
-        max-width: 1100px;
-        margin: auto;
-      }
-
-      h1,
-      h2,
-      h3 {
-        color: #ffffff;
-        font-weight: 700;
-        margin-bottom: 1rem;
-        text-shadow: 0 0 10px #0ff;
-      }
-
-      .bio {
-        font-size: 1.2rem;
-        color: #c0c0ff;
-        max-width: 700px;
-      }
-
-      .servicios,
-      .proyectos {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
-      }
-
-      .card {
-        background: #1c1c3a;
-        border-radius: 16px;
-        box-shadow: 0 0 20px #00f2ff44;
-        padding: 2rem;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border: 1px solid #00f2ff22;
-      }
-
-      .card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 0 25px #00f2ff99;
-      }
-
-      .card img {
-        max-width: 100%;
-        border-radius: 12px;
-        margin-bottom: 1rem;
-        border: 2px solid #00f2ff22;
-      }
-
-      .card h3 {
-        color: #0ff;
-        margin-bottom: 0.5rem;
-      }
-
-      .card p {
-        color: #b0b0d0;
-      }
-
-      .contacto {
-        background: #13132a;
-        padding: 3rem 2rem;
-        border-radius: 16px;
-        text-align: center;
-        margin-top: 3rem;
-        box-shadow: 0 0 20px #00f2ff33;
-        border: 1px solid #00f2ff22;
-      }
-
-      .contacto p {
-        color: #c0c0ff;
-        margin-bottom: 1.5rem;
-      }
-
-      .redes a {
-        margin: 0 1rem;
-        color: #0ff;
-        font-size: 1.8rem;
-        transition: 0.3s ease;
-        text-shadow: 0 0 5px #0ff;
-      }
-
-      .redes a:hover {
-        color: #00fff2;
-        text-shadow: 0 0 10px #00fff2;
-      }
-
-      footer {
-        background-color: #0e0e20;
-        text-align: center;
-        padding: 1rem;
-        font-size: 0.9rem;
-        color: #8888aa;
-        border-top: 1px solid #00f2ff22;
-      }
-
-      @media (max-width: 768px) {
-        header {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
-        nav {
-          margin-top: 1rem;
-        }
-
-        nav a {
-          display: block;
-          margin: 0.5rem 0;
-        }
-
-        .redes a {
-          display: inline-block;
-          margin: 0.5rem;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
@@ -250,6 +74,7 @@
     <section id="proyectos" data-aos="fade-up">
       <h2>Proyectos</h2>
       <div class="proyectos">
+        <!-- Proyecto 1 -->
         <div class="card">
           <a
             href="https://notseijas.github.io/landing-entrenador/"
@@ -266,6 +91,8 @@
             servicios individuales.
           </p>
         </div>
+
+        <!-- Proyecto 2 -->
         <div class="card">
           <a href="https://huariquepucallpa.netlify.app/" target="_blank">
             <img
@@ -278,6 +105,8 @@
             Web con menú interactivo, galería de platos y sistema de reservas.
           </p>
         </div>
+
+        <!-- Proyecto 3 -->
         <div class="card">
           <a href="https://www.manosperuanas.com/" target="_blank">
             <img
@@ -291,6 +120,8 @@
             responsivo.
           </p>
         </div>
+
+        <!-- Proyecto 4 -->
         <div class="card">
           <a href="https://notseijas.github.io/becode-landing/" target="_blank">
             <img
@@ -303,6 +134,8 @@
             Landing page para una campaña publicitaria con integración de redes.
           </p>
         </div>
+
+        <!-- Proyecto 5 -->
         <div class="card">
           <a href="#" target="_blank">
             <img
