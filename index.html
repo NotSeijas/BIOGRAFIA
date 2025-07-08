@@ -46,6 +46,9 @@
         <a href="#proyectos">Proyectos</a>
         <a href="#contacto">Contacto</a>
       </nav>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+        <i class="fas fa-sun"></i>
+      </button>
     </header>
 
     <section id="sobre-mi" data-aos="fade-up">
@@ -202,6 +205,18 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
+      const toggle = document.getElementById('theme-toggle');
+      const prefersLight = localStorage.getItem('theme') === 'light';
+      if (prefersLight) {
+        document.body.classList.add('light-theme');
+        toggle.innerHTML = '<i class="fas fa-moon"></i>';
+      }
+      toggle.addEventListener('click', () => {
+        document.body.classList.toggle('light-theme');
+        const light = document.body.classList.contains('light-theme');
+        toggle.innerHTML = light ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+        localStorage.setItem('theme', light ? 'light' : 'dark');
+      });
     </script>
   </body>
 </html>
