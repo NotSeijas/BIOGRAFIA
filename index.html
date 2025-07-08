@@ -19,6 +19,9 @@
     />
     <meta property="og:url" content="https://notseijas.github.io" />
     <title>Diego Seijas | Desarrollador Web</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#1d3557" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
       rel="stylesheet"
@@ -31,6 +34,8 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div id="particles-js"></div>
+
     <header>
       <div class="header-info">
         <img
@@ -40,7 +45,7 @@
         />
         <span>C . O Diego Seijas</span>
       </div>
-      <nav>
+      <nav aria-label="Menú principal">
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#servicios">Servicios</a>
         <a href="#proyectos">Proyectos</a>
@@ -48,160 +53,185 @@
       </nav>
     </header>
 
-    <section id="sobre-mi" data-aos="fade-up">
-      <h1>Hola, soy Diego Seijas</h1>
-      <p class="bio">
-        Soy desarrollador web full-stack con enfoque en crear soluciones
-        digitales eficientes, escalables y atractivas. Combino creatividad y
-        lógica para construir interfaces intuitivas y sistemas robustos que
-        potencian la experiencia del usuario y el rendimiento de las
-        aplicaciones. Trabajo con tecnologías modernas como React, Angular,
-        Tailwind CSS, Node.js y bases de datos SQL/NoSQL para transformar ideas
-        en productos digitales reales.
-      </p>
-    </section>
+    <main>
+      <section id="sobre-mi" data-aos="fade-up">
+        <h1>Hola, soy Diego Seijas</h1>
+        <p class="bio">
+          Soy desarrollador web full-stack con enfoque en crear soluciones
+          digitales eficientes, escalables y atractivas. Combino creatividad y
+          lógica para construir interfaces intuitivas y sistemas robustos que
+          potencian la experiencia del usuario. Trabajo con tecnologías modernas
+          como React, Angular, Tailwind CSS, Node.js y bases de datos SQL/NoSQL.
+        </p>
+      </section>
 
-    <section id="servicios" data-aos="fade-up">
-      <h2>Servicios</h2>
-      <div class="servicios">
-        <div class="card">
-          <h3>Diseño y Desarrollo Web</h3>
-          <p>
-            Diseño de sitios modernos, responsivos y centrados en el usuario,
-            con desarrollo completo del frontend y backend para una experiencia
-            integrada.
-          </p>
+      <section id="servicios" data-aos="fade-up">
+        <h2>Servicios</h2>
+        <div class="servicios">
+          <div class="card">
+            <h3>Diseño y Desarrollo Web</h3>
+            <p>
+              Sitios modernos, responsivos y centrados en el usuario, con
+              desarrollo completo del frontend y backend.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Desarrollo Frontend</h3>
+            <p>
+              Interfaces interactivas y accesibles con React, Angular y Tailwind
+              CSS.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Desarrollo Backend</h3>
+            <p>
+              Construcción de APIs, gestión de bases de datos y lógica del
+              servidor con Node.js.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Optimización SEO</h3>
+            <p>
+              Implementación de buenas prácticas de SEO técnico para mejorar el
+              posicionamiento.
+            </p>
+          </div>
         </div>
-        <div class="card">
-          <h3>Desarrollo Frontend</h3>
-          <p>
-            Creación de interfaces interactivas y accesibles con React, Angular,
-            JavaScript y Tailwind CSS, asegurando un rendimiento óptimo en todos
-            los dispositivos.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Desarrollo Backend</h3>
-          <p>
-            Construcción de APIs, gestión de bases de datos y lógica del
-            servidor utilizando Node.js, Express, y soluciones modernas para
-            asegurar escalabilidad y seguridad.
-          </p>
-        </div>
-        <div class="card">
-          <h3>Optimización SEO</h3>
-          <p>
-            Implementación de buenas prácticas de SEO técnico y estructural para
-            mejorar la visibilidad y posicionamiento en motores de búsqueda.
-          </p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="proyectos" data-aos="fade-up">
-      <h2>Proyectos</h2>
-      <div class="proyectos">
-        <div class="card">
+      <section id="proyectos" data-aos="fade-up">
+        <h2>Proyectos</h2>
+        <div class="proyectos">
+          <div class="card">
+            <a
+              href="https://notseijas.github.io/landing-entrenador/"
+              target="_blank"
+            >
+              <img
+                src="https://res.cloudinary.com/dt0f3rrdh/image/upload/v1745616450/treiner_p3vpy7.png"
+                alt="Landing de entrenador personal"
+              />
+            </a>
+            <h3>Entrenador Personal</h3>
+            <p>Landing page para promocionar servicios individuales.</p>
+          </div>
+          <div class="card">
+            <a href="https://huariquepucallpa.netlify.app/" target="_blank">
+              <img
+                src="https://res.cloudinary.com/dt0f3rrdh/image/upload/v1745607933/huarique_ccuxsm.png"
+                alt="Menú interactivo Huarique"
+              />
+            </a>
+            <h3>Huariques Pucallpa</h3>
+            <p>Web con menú interactivo, galería y reservas.</p>
+          </div>
+          <div class="card">
+            <a href="https://www.manosperuanas.com/" target="_blank">
+              <img
+                src="https://res.cloudinary.com/dt0f3rrdh/image/upload/v1745616980/TIENDA_mlslnc.png"
+                alt="Tienda artesanal"
+              />
+            </a>
+            <h3>Tienda Artesanal</h3>
+            <p>Catálogo con carrito de compras simulado y diseño responsivo.</p>
+          </div>
+          <div class="card">
+            <a
+              href="https://notseijas.github.io/becode-landing/"
+              target="_blank"
+            >
+              <img
+                src="https://pqs.pe/wp-content/uploads/2021/02/pqs-freelance-trabajo-autonomia.jpg"
+                alt="Campaña freelance"
+              />
+            </a>
+            <h3>Campaña de Empleo</h3>
+            <p>Landing page con integración de redes sociales.</p>
+          </div>
+          <div class="card">
+            <a
+              href="https://notseijas.github.io/MaletaDeManoStore/"
+              target="_blank"
+            >
+              <img
+                src="https://res.cloudinary.com/dt0f3rrdh/image/upload/v1748294736/WhatsApp_Image_2025-05-16_at_22.28.13_eqhl0z.jpg"
+                alt="e-commerce supplements Shop"
+              />
+            </a>
+            <h3>e-commerce supplements Shop</h3>
+            <p>
+              Web de venta de suplementos con galería y contacto profesional.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="contacto" data-aos="fade-up">
+        <h2>Contáctame</h2>
+        <p>
+          ¿Quieres que trabajemos juntos o tienes alguna duda? ¡Estoy disponible
+          para nuevos proyectos!
+        </p>
+        <a href="mailto:diegoseijascorp@gmail.com" class="btn-enviar"
+          >Enviar correo</a
+        >
+        <div class="redes">
+          <a href="https://wa.me/51998984552" target="_blank" title="WhatsApp"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
           <a
-            href="https://notseijas.github.io/landing-entrenador/"
+            href="https://www.instagram.com/notseijas/"
             target="_blank"
-          >
-            <img
-              src="https://res.cloudinary.com/dt0f3rrdh/image/upload/v1745616450/treiner_p3vpy7.png"
-              alt="Landing de entrenador personal con formulario de contacto"
-            />
-          </a>
-          <h3>Entrenador Personal</h3>
-          <p>
-            Landing page con formulario de contacto, ideal para promocionar
-            servicios individuales.
-          </p>
+            title="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
         </div>
-        <div class="card">
-          <a href="https://huariquepucallpa.netlify.app/" target="_blank">
-            <img
-              src="https://res.cloudinary.com/dt0f3rrdh/image/upload/v1745607933/huarique_ccuxsm.png"
-              alt="Menú interactivo de restaurante El Sabor"
-            />
-          </a>
-          <h3>Huariques Pucallpa</h3>
-          <p>
-            Web con menú interactivo, galería de platos y sistema de reservas.
-          </p>
-        </div>
-        <div class="card">
-          <a href="https://www.manosperuanas.com/" target="_blank">
-            <img
-              src="https://res.cloudinary.com/dt0f3rrdh/image/upload/v1745616980/TIENDA_mlslnc.png"
-              alt="Tienda artesanal con catálogo y carrito"
-            />
-          </a>
-          <h3>Tienda Artesanal</h3>
-          <p>
-            Catálogo de productos con carrito de compras simulado y diseño
-            responsivo.
-          </p>
-        </div>
-        <div class="card">
-          <a href="https://notseijas.github.io/becode-landing/" target="_blank">
-            <img
-              src="https://pqs.pe/wp-content/uploads/2021/02/pqs-freelance-trabajo-autonomia.jpg"
-              alt="Campaña freelance publicitaria"
-            />
-          </a>
-          <h3>Campaña de Empleo</h3>
-          <p>
-            Landing page para una campaña publicitaria con integración de redes.
-          </p>
-        </div>
-        <div class="card">
-          <a
-            href="https://notseijas.github.io/MaletaDeManoStore/"
-            target="_blank"
-          >
-            <img
-              src="https://res.cloudinary.com/dt0f3rrdh/image/upload/v1748294736/WhatsApp_Image_2025-05-16_at_22.28.13_eqhl0z.jpg"
-              alt="e-commerce supplements Shop "
-            />
-          </a>
-          <h3>e-commerce supplements Shop</h3>
-          <p>
-            Web con galería, sección de artistas y formulario de contacto
-            profesional.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contacto" class="contacto" data-aos="fade-up">
-      <h3>Contáctame</h3>
-      <p>
-        ¿Quieres que trabajemos juntos o tienes alguna duda? ¡Estoy disponible
-        para nuevos proyectos!
-      </p>
-      <a href="mailto:diegoseijascorp@gmail.com" class="btn-enviar"
-        >Enviar correo</a
-      >
-      <div class="redes">
-        <a href="https://wa.me/51998984552" target="_blank" title="WhatsApp"
-          ><i class="fab fa-whatsapp"></i
-        ></a>
-        <a
-          href="https://www.instagram.com/notseijas/"
-          target="_blank"
-          title="Instagram"
-          ><i class="fab fa-instagram"></i
-        ></a>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <footer>
       <p>&copy; 2025 Diego Seijas. Todos los derechos reservados.</p>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init();
+      AOS.init({ duration: 1000, once: true });
+
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 60, density: { enable: true, value_area: 800 } },
+          color: { value: "#a8dadc" },
+          shape: { type: "circle" },
+          opacity: { value: 0.3, random: true },
+          size: { value: 3, random: true },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#a8dadc",
+            opacity: 0.2,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 1.5,
+            direction: "none",
+            out_mode: "out",
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "grab" },
+            resize: true,
+          },
+          modes: {
+            grab: { distance: 140, line_linked: { opacity: 0.3 } },
+          },
+        },
+        retina_detect: true,
+      });
     </script>
   </body>
 </html>
